@@ -1,0 +1,34 @@
+{
+    "manifest_version":2,
+
+    "name":"KOSHIAN メール欄を表示",
+
+    "version":"1.1.0",
+
+    "description":"メール欄を表示します",
+
+    "icons":{
+        "48":"icons/icon-48.png"
+    },
+
+    "content_scripts":[
+        {
+            "matches":["*://*.2chan.net/*/res/*"],
+            "js":["res.js"]
+        }
+    ],
+
+    "options_ui": {
+        "page": "options.html"
+    },
+    
+    "permissions": [
+        "storage"
+    ],
+
+    "applications": {
+        "gecko": {
+            "id": "{72dc356d-77cc-46e2-a1de-66468fc6c917}"
+        }
+    }
+}
