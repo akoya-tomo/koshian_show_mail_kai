@@ -11,6 +11,10 @@
         "48":"icons/icon-48.png"
     },
 
+    "author": "akoya_tomo",
+
+    "homepage_url": "https://github.com/akoya-tomo/koshian_show_mail_kai/",
+
     "content_scripts":[
         {
             "matches":["*://*.2chan.net/*/res/*"],
@@ -28,7 +32,8 @@
 
     "applications": {
         "gecko": {
-            "id": "{72dc356d-77cc-46e2-a1de-66468fc6c917}"
+            "id": "koshian_show_mail_kai@akoya-tomo.github.io",
+            "update_url": "https://raw.githubusercontent.com/akoya-tomo/koshian_show_mail_kai/master/updates.json"
         }
     }
 }
