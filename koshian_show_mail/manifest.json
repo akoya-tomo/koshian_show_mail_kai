@@ -1,0 +1,39 @@
+{
+    "manifest_version":2,
+
+    "name":"KOSHIAN メール欄を表示 改",
+
+    "version":"1.0.0",
+
+    "description":"メール欄を表示します",
+
+    "icons":{
+        "48":"icons/icon-48.png"
+    },
+
+    "author": "akoya_tomo",
+
+    "homepage_url": "https://github.com/akoya-tomo/koshian_show_mail_kai/",
+
+    "content_scripts":[
+        {
+            "matches":["*://*.2chan.net/*/res/*"],
+            "js":["res.js"]
+        }
+    ],
+
+    "options_ui": {
+        "page": "options.html"
+    },
+    
+    "permissions": [
+        "storage"
+    ],
+
+    "applications": {
+        "gecko": {
+            "id": "koshian_show_mail_kai@akoya-tomo.github.io",
+            "update_url": "https://raw.githubusercontent.com/akoya-tomo/koshian_show_mail_kai/master/updates.json"
+        }
+    }
+}

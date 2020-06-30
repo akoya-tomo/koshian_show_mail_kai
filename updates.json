@@ -1,0 +1,12 @@
+{
+  "addons": {
+    "koshian_show_mail_kai@akoya-tomo.github.io": {
+      "updates": [
+        { "version": "1.0.0",
+          "update_link": "https://github.com/akoya-tomo/koshian_show_mail_kai/releases/download/v1.0.0/koshian_show_mail_kai-1.0.0-fx.xpi",
+          "update_info_url": "https://github.com/akoya-tomo/koshian_show_mail_kai/releases/download/v1.0.0/update_info.html"
+        }
+      ]
+    }
+  }
+}
