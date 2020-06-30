@@ -94,9 +94,36 @@ function process(beg = 0, end = -1){
 function main(){
     process();
 
+    // KOSHIAN リロード監視
     document.addEventListener("KOSHIAN_reload", (e) => {
         process(last_process_index);
     });
+
+    // ふたば リロード監視
+    let contdisp = document.getElementById("contdisp");
+    if (contdisp) {
+        checkFutabaReload(contdisp);
+    }
+    function checkFutabaReload(target) {
+        let status = "";
+        let reloading = false;
+        let config = { childList: true };
+        let observer = new MutationObserver(() => {
+            if (target.textContent == status) {
+                return;
+            }
+            status = target.textContent;
+            if (status == "・・・") {
+                reloading = true;
+            } else if (reloading && status.endsWith("頃消えます")) {
+                process(last_process_index);
+                reloading = false;
+            } else {
+                reloading = false;
+            }
+        });
+        observer.observe(target, config);
+    }
 }
 
 function safeGetValue(value, default_value) {
